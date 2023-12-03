@@ -4,7 +4,9 @@ import cors from 'cors'
 
 
 const app = express();
+
 app.use(cors())
+const port = process.env.PORT || 3001;
 var  gldata;
 
 const get_data=()=>{
@@ -21,6 +23,5 @@ app.get('/isl',(req,res)=>{
 })
 
 
-app.listen(3002,()=>{
-    console.log('http://localhost:3001');
-})
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
